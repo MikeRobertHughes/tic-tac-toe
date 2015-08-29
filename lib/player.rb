@@ -1,13 +1,13 @@
 class Player
 
-  attr_accessor :name, :squarenum
+  attr_accessor :name, :square_num
 
   def initialize(name="Player One")
     @name = name
-    @squarenum = "-1"
+    @square_num = "-1"
   end
 
-  def choose_square(num)
-    @squarenum = num
+  def square_choice(num)
+    @square_num = num
   end
 end
