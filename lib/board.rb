@@ -144,6 +144,22 @@ class Board
     board_full
   end
 
+  def game_over?
+    if self.win_horiz? || self.win_diag? || self.win_vert? || self.is_board_full?
+      true
+    else
+      false
+    end
+  end
+
+  def game_won?
+    if self.win_horiz? || self.win_diag? || self.win_vert?
+      true
+    else
+      false
+    end
+  end
+
   def build_board
     @game_board = "\n" #"\nXOXOXO Tic - Tac - Toe XOXOXO \n\n"
     3.times do |i|
@@ -174,14 +190,6 @@ class Board
       @board[2][x - 7] = "X"
     elsif x == @nine.to_i
       @board[2][x - 7] = "X"
-    end
-  end
-
-  def game_over?
-    if self.win_horiz? || self.win_diag? || self.win_vert? || self.is_board_full?
-      true
-    else
-      false
     end
   end
 
