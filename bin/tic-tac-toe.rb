@@ -9,10 +9,10 @@ puts "Press enter to begin or press q to exit...square."
 while (leave = gets.chomp.downcase) != 'q'
   system('clear')
   puts "\nWelcome to the FUTURE. THIS. IS. TIC. TAC. TOE!!!!!!!!!!!!\n\n"
-  # system('say We built this city.')
-  # system('sleep 1.5')
-  # system('say We built this city...on')
-  # system('clear')
+  system('say We built this city.')
+  system('sleep 1.5')
+  system('say We built this city...on')
+  system('clear')
   puts "   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄
 ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
  ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌
@@ -25,10 +25,10 @@ while (leave = gets.chomp.downcase) != 'q'
      ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀
                                           \n\n"
-  # system('sleep .2')
-  # system('say Tic!')
-  # system('sleep .2')
-  # system('clear')
+  system('sleep .2')
+  system('say Tic!')
+  system('sleep .2')
+  system('clear')
   puts " ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄
 ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
  ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌
@@ -41,9 +41,9 @@ while (leave = gets.chomp.downcase) != 'q'
      ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌
       ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀
                                           \n\n"
-  # system('sleep .2')
-  # system('say Tac!')
-  # system('sleep .2')
+  system('sleep .2')
+  system('say Tac!')
+  system('sleep .2')
   system('clear')
   puts(" ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄
 ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
@@ -57,9 +57,9 @@ while (leave = gets.chomp.downcase) != 'q'
      ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀
                                           \n\n")
-  # system('sleep .2')
-  # system('say Toe-oooooo!')
-  # system('sleep .2')
+  system('sleep .2')
+  system('say Toe-oooooo!')
+  system('sleep .2')
   system('clear')
   puts "\nTo play the El \u00A1Computinator!: Press '1' now"
   puts "To play a two-player game: Press '2' now"
@@ -79,7 +79,7 @@ while (leave = gets.chomp.downcase) != 'q'
       system('clear')
       puts "Hello #{player1.name}! Your challenger is #{computer.name}"
       system('sleep 2')
-      # system("say Oh-la Senor #{player1.name}. Soy. . . the computinator.")
+      system("say Oh-la Senor #{player1.name}. Soy. . . the computinator.")
       puts "You will go first. You will be X's."
       puts "#{board.build_board}"
       until board.game_over?
