@@ -39,29 +39,6 @@ class Board
     end
   end
 
-  def exists(square_num)
-    exists = false
-    if square_num == "1"
-      exists = true
-    elsif square_num == "2"
-      exists = true
-    elsif square_num == "3"
-      exists = true
-    elsif square_num == "4"
-      exists = true
-    elsif square_num == "5"
-      exists = true
-    elsif square_num == "6"
-      exists = true
-    elsif square_num == "7"
-      exists = true
-    elsif square_num == "8"
-      exists = true
-    elsif square_num == "9"
-      exists = true
-    end
-  end
-
   def square_taken(square_num, current_board )
     square_took = false
     if square_num == "1" && ( current_board == "X" || current_board  == "O" )
@@ -88,11 +65,35 @@ class Board
     square_took
   end
 
+    def exists(square_num)
+    exists = false
+    if square_num == "1"
+      exists = true
+    elsif square_num == "2"
+      exists = true
+    elsif square_num == "3"
+      exists = true
+    elsif square_num == "4"
+      exists = true
+    elsif square_num == "5"
+      exists = true
+    elsif square_num == "6"
+      exists = true
+    elsif square_num == "7"
+      exists = true
+    elsif square_num == "8"
+      exists = true
+    elsif square_num == "9"
+      exists = true
+    end
+    exists
+  end
+
   def win_horiz?
     did_win = false
     3.times do |i|
       if @board[i][0] == @board[i][1] && @board[i][1] == @board[i][2]
-        puts "Congrats! #{@board[i][0]}'s wins horizontally!"
+        puts "Congrats! #{@board[i][0]}'s win horizontally!"
         did_win = true
         break
       end
@@ -104,7 +105,7 @@ class Board
     did_win = false
     3.times do |i|
       if @board[0][i] == @board[1][i] && @board[1][i] == @board[2][i]
-        puts "Congrats! #{@board[0][i]}'s wins vertically!"
+        puts "Congrats! #{@board[0][i]}'s win vertically!"
         did_win = true
         break
       end
@@ -115,10 +116,10 @@ class Board
   def win_diag?
     did_win = false
     if @board[0][0] == @board[1][1] && @board[1][1] == @board[2][2]
-      puts "Congrats! #{@board[1][1]}'s wins diagonally!"
+      puts "Congrats! #{@board[1][1]}'s win diagonally!"
       did_win = true
     elsif @board[0][2] == @board[1][1] && @board[1][1] == @board[2][0]
-      puts "Congrats! #{@board[1][1]}'s wins diagonally!"
+      puts "Congrats! #{@board[1][1]}'s win diagonally!"
       did_win = true
     end
     did_win
@@ -137,7 +138,7 @@ class Board
       end
     end
     if x == 0
-      puts "Board is full. It's a draw!"
+      puts "It's a draw!"
       board_full = true
     end
     board_full
@@ -155,7 +156,6 @@ class Board
     x = x.to_i
     if x <= 0 || x > 9
       puts "That square doesn't exist."
-      false
     elsif x == @one.to_i
       @board[0][x - 1] = "X"
     elsif x == @two.to_i
@@ -174,6 +174,14 @@ class Board
       @board[2][x - 7] = "X"
     elsif x == @nine.to_i
       @board[2][x - 7] = "X"
+    end
+  end
+
+  def game_over?
+    if self.win_horiz? || self.win_diag? || self.win_vert? || self.is_board_full?
+      true
+    else
+      false
     end
   end
 

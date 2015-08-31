@@ -8,6 +8,10 @@ class Player
   end
 
   def square_choice(num)
-    @square_num = num
+    if num == ""
+      @square_num = "-1"
+    else
+      @square_num = num
+    end
   end
 end
